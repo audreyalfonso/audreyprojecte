@@ -79,7 +79,7 @@ class DatabaseHelper {
 
   // We are assuming here that the id column in the map is set. The other
   // column values will be used to update the row.
-  Future<int> update(Map<String, dynamic> row) async {
+  Future<int> update(row) async {
     Database db = await instance.database;
     int id = row[columnId];
     return await db.update(table, row, where: '$columnId = ?', whereArgs: [id]);

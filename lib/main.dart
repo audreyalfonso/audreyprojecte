@@ -41,269 +41,16 @@ class _IniciState extends State<Inici> {
     return Scaffold(
       body: SafeArea(
         child: ListView(
-          padding: EdgeInsets.symmetric(horizontal: 50),
-          children: <Widget>[
-            SizedBox(height: 70),
-            Column(
-              children: <Widget>[
-                Image.asset('assets/fons_nom.PNG'),
-                SizedBox(height: 50),
-              ],
-            ),
-            MaterialButton(
-              minWidth: 100,
-              height: 50,
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => IniciSessio()),
-                );
-              },
-              color: Colors.blue,
-              child: Text('Iniciar Sesión',style: TextStyle(color: Colors.white, fontSize: 20)),
-            ),
-            SizedBox(height: 30,),
-            MaterialButton(
-              minWidth: 100,
-              height: 50,
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Registrarse()),
-                );
-              },
-              color: Colors.grey,
-              child: Text('Registrarse', style: TextStyle(color: Colors.white, fontSize: 20)),
-            ),
-            SizedBox(height: 10),
-            Column(
-              children: <Widget>[
-                Image.asset('assets/decoracioInici.PNG'),
-                SizedBox(height: 10),
-              ],
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-/*----------------------------INICI-SESSIÓ------------------------------------*/
-
-class IniciSessio extends StatelessWidget {
-
-
-  @override
-  Widget build(BuildContext context) {
-
-
-    return MaterialApp(
-        title: 'Flutter Demo',
-        theme: ThemeData(
-          primarySwatch: Colors.blueGrey,
-        ),
-        home: inicisessioPage()
-
-    );
-  }
-}
-
-class inicisessioPage extends StatefulWidget {
-
-
-  @override
-  _inicisessioPageState createState() => _inicisessioPageState();
-}
-
-class _inicisessioPageState extends State<inicisessioPage> {
-
-
-  @override
-  Widget build(BuildContext context) {
-
-    return Scaffold(
-      body: SafeArea(
-        child: ListView(
           padding: EdgeInsets.symmetric(horizontal: 30),
           children: <Widget>[
             SizedBox(height: 80),
-            Column(
-              children: <Widget>[
-                Image.asset('assets/logo.png'),
-                SizedBox(height: 10),
-              ],
-            ),
-            SizedBox(height: 40),
-            TextField(
-              decoration: InputDecoration(
-                filled: true,
-                labelText: 'Nombre / Email',
-              ),
-            ),
-            SizedBox(height: 20),
-            TextField(
-              decoration: InputDecoration(
-                filled: true,
-                labelText: 'Contraseña',
-              ),
-              obscureText: true,
-            ),
-            SizedBox(height: 70,),
-            MaterialButton(
-              height: 50,
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => PrimeraPagina()),
-                );
-              },
-              color: Colors.blue,
-              child: Text('Iniciar Sessión',
-                  style: TextStyle(color: Colors.white, fontSize: 20)),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-/*----------------------------REGISTRARSE-------------------------------------*/
-
-class Registrarse extends StatelessWidget {
-
-
-  @override
-  Widget build(BuildContext context) {
-
-
-    return MaterialApp(
-        title: 'Flutter Demo',
-        theme: ThemeData(
-          primarySwatch: Colors.blueGrey,
-        ),
-        home: Registre()
-
-    );
-  }
-}
-
-class Registre extends StatefulWidget {
-
-
-  @override
-  _RegistreState createState() => _RegistreState();
-}
-
-class _RegistreState extends State<Registre> {
-
-
-  // TODO: Add text editing controllers (101)
-  @override
-  Widget build(BuildContext context) {
-
-    return Scaffold(
-      body: SafeArea(
-        child: ListView(
-          padding: EdgeInsets.symmetric(horizontal: 30),
-          children: <Widget>[
-            SizedBox(height: 60),
-            Column(
-              children: <Widget>[
-                Image.asset('assets/logo.png'),
-                SizedBox(height: 10),
-              ],
-            ),
-            SizedBox(height: 40),
-            TextField(
-              decoration: InputDecoration(
-                filled: true,
-                labelText: 'Nombre',
-              ),
-            ),
-            SizedBox(height: 20),
-            TextField(
-              decoration: InputDecoration(
-                filled: true,
-                labelText: 'Email',
-              ),
-            ),
-            SizedBox(height: 20),
-            TextField(
-              decoration: InputDecoration(
-                filled: true,
-                labelText: 'Contraseña',
-              ),
-              obscureText: true,
-            ),
-            SizedBox(height: 60,),
-            MaterialButton(
-                padding: EdgeInsets.symmetric(horizontal: 50),
-                height: 50,
-                color: Colors.blue,
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => PrimeraPagina()),
-                  );
-                },
-                child: Text('Registrarse',
-                    style: TextStyle(color: Colors.white, fontSize: 20)),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-/*----------------------------PRIMERA-PÀGINA----------------------------------*/
-
-class PrimeraPagina extends StatelessWidget {
-
-
-  @override
-  Widget build(BuildContext context) {
-
-
-    return MaterialApp(
-        title: 'Flutter Demo',
-        theme: ThemeData(
-          primarySwatch: Colors.blueGrey,
-        ),
-        home: Primera()
-
-    );
-  }
-}
-
-class Primera extends StatefulWidget {
-
-
-  @override
-  _PrimeraState createState() => _PrimeraState();
-}
-
-class _PrimeraState extends State<Primera> {
-
-
-  @override
-  Widget build(BuildContext context) {
-
-    return Scaffold(
-      body: SafeArea(
-        child: ListView(
-          padding: EdgeInsets.symmetric(horizontal: 30),
-          children: <Widget>[
-            SizedBox(height: 100),
             Column(
               children: <Widget>[
                 Image.asset('assets/nom.PNG'),
                 SizedBox(height: 10),
               ],
             ),
-            SizedBox(height: 60,),
+            SizedBox(height: 30,),
             MaterialButton(
               height: 50,
               onPressed: () {
@@ -327,6 +74,19 @@ class _PrimeraState extends State<Primera> {
               },
               color: Colors.blue,
               child: Text('Eliminar receta',
+                  style: TextStyle(color: Colors.white, fontSize: 20)),
+            ),
+            SizedBox(height: 20,),
+            MaterialButton(
+              height: 50,
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ModificarReceta()),
+                );
+              },
+              color: Colors.blue,
+              child: Text('Modificar receta',
                   style: TextStyle(color: Colors.white, fontSize: 20)),
             ),
             SizedBox(height: 40),
@@ -384,14 +144,14 @@ class _AnadirState extends State<Anadir> {
         child: ListView(
           padding: EdgeInsets.symmetric(horizontal: 30),
           children: <Widget>[
-            SizedBox(height: 70),
+            SizedBox(height: 60),
             Column(
               children: <Widget>[
-                Image.asset('assets/nomesNom.PNG'),
+                Image.asset('assets/fons_nom.PNG'),
                 SizedBox(height: 10),
               ],
             ),
-            SizedBox(height: 30,),
+            SizedBox(height: 40,),
             TextField(
               controller: autorController,
               decoration: InputDecoration(
@@ -455,7 +215,7 @@ class _AnadirState extends State<Anadir> {
 
   void _query() async {
     final allRows = await dbHelper.queryAllRows();
-    print('query all rows:');
+    print('Estas són las recetas disponibles:');
     allRows.forEach(print);
   }
 
@@ -489,7 +249,8 @@ class Eliminar extends StatefulWidget {
 }
 
 class _EliminarState extends State<Eliminar> {
-
+  final dbHelper = DatabaseHelper.instance;
+  TextEditingController idDeleteController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -499,47 +260,192 @@ class _EliminarState extends State<Eliminar> {
         child: ListView(
           padding: EdgeInsets.symmetric(horizontal: 30),
           children: <Widget>[
-            SizedBox(height: 70),
+            SizedBox(height: 90),
             Column(
               children: <Widget>[
-                Image.asset('assets/nomesNom.PNG'),
+                Image.asset('assets/fons_nom.PNG'),
                 SizedBox(height: 10),
               ],
             ),
-            SizedBox(height: 30,),
+            SizedBox(height: 50,),
+            TextField(
+              controller: idDeleteController,
+              decoration: InputDecoration(
+                filled: true,
+                labelText: 'Id receta',
+              ),
+            ),
+            SizedBox(height: 20,),
             TextField(
               decoration: InputDecoration(
                 filled: true,
                 labelText: 'Nombre autor',
               ),
             ),
-            SizedBox(height: 20),
-            TextField(
-              decoration: InputDecoration(
-                filled: true,
-                labelText: 'Nombre receta',
-              ),
-            ),
-            SizedBox(height: 50,),
+            SizedBox(height: 60,),
             MaterialButton(
               height: 50,
-              onPressed: () {
-
-              },
               color: Colors.blue,
+              onPressed: () {
+                int id = int.parse(idDeleteController.text);
+                _delete(id);
+              },
               child: Text('Eliminar',
                   style: TextStyle(color: Colors.white, fontSize: 20)),
             ),
-            SizedBox(height: 20),
-            Column(
-              children: <Widget>[
-                Image.asset('assets/decoracio.PNG'),
-                SizedBox(height: 10),
-              ],
+            SizedBox(height: 10,),
+            MaterialButton(
+              height: 50,
+              color: Colors.blue,
+              onPressed: _query,
+              child: Text('Query',
+                  style: TextStyle(color: Colors.white, fontSize: 20)),
             ),
           ],
         ),
       ),
     );
   }
+
+  void _delete(id) async {
+    // Assuming that the number of rows is the id for the last row.
+    final idDeleted = await dbHelper.delete(id!);
+    print('deleted $idDeleted row(s): row $id');
+  }
+
+  void _query() async {
+    final allRows = await dbHelper.queryAllRows();
+    print('Estas són las recetas disponibles:');
+    allRows.forEach(print);
+  }
+
+}
+
+/*----------------------------MODIFICAR-RECETA--------------------------------*/
+
+class ModificarReceta extends StatelessWidget {
+
+
+  @override
+  Widget build(BuildContext context) {
+
+
+    return MaterialApp(
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          primarySwatch: Colors.blueGrey,
+        ),
+        home: Modificar()
+
+    );
+  }
+}
+
+class Modificar extends StatefulWidget {
+
+
+  @override
+  _ModificarState createState() => _ModificarState();
+}
+
+class _ModificarState extends State<Modificar> {
+  final dbHelper = DatabaseHelper.instance;
+  TextEditingController idUpdateController = TextEditingController();
+  TextEditingController autorUpdateController = TextEditingController();
+  TextEditingController recetaUpdateController = TextEditingController();
+  TextEditingController ingredienteUpdateController = TextEditingController();
+
+  @override
+  Widget build(BuildContext context) {
+
+    return Scaffold(
+      body: SafeArea(
+        child: ListView(
+          padding: EdgeInsets.symmetric(horizontal: 30),
+          children: <Widget>[
+            SizedBox(height: 50),
+            Column(
+              children: <Widget>[
+                Image.asset('assets/fons_nom.PNG'),
+                SizedBox(height: 10),
+              ],
+            ),
+            SizedBox(height: 20,),
+            TextField(
+              controller: idUpdateController,
+              decoration: InputDecoration(
+                filled: true,
+                labelText: 'Id receta',
+              ),
+            ),
+            SizedBox(height: 20,),
+            TextField(
+              controller: autorUpdateController,
+              decoration: InputDecoration(
+                filled: true,
+                labelText: 'Nombre autor',
+              ),
+            ),
+            SizedBox(height: 20,),
+            TextField(
+              controller: recetaUpdateController,
+              decoration: InputDecoration(
+                filled: true,
+                labelText: 'Nombre receta',
+              ),
+            ),
+            SizedBox(height: 20),
+            TextField(
+              controller: ingredienteUpdateController,
+              decoration: InputDecoration(
+                filled: true,
+                labelText: 'Ingredientes',
+              ),
+            ),
+            SizedBox(height: 40,),
+            MaterialButton(
+              height: 50,
+              color: Colors.blue,
+              onPressed: () {
+                int id = int.parse(idUpdateController.text);
+                String autor = autorUpdateController.text;
+                String receta = recetaUpdateController.text;
+                String ingrediente = ingredienteUpdateController.text;
+                _update(id, autor, receta, ingrediente);
+              },
+              child: Text('Modificar',
+                  style: TextStyle(color: Colors.white, fontSize: 20)),
+            ),
+            SizedBox(height: 10,),
+            MaterialButton(
+              height: 50,
+              color: Colors.blue,
+              onPressed: _query,
+              child: Text('Query',
+                  style: TextStyle(color: Colors.white, fontSize: 20)),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  void _update(id, autor, receta, ingrediente) async {
+    // row to update
+    Map<String, dynamic> row = {
+      DatabaseHelper.columnId: id,
+      DatabaseHelper.columnAutor: autor,
+      DatabaseHelper.columnReceta: receta,
+      DatabaseHelper.columnIngrediente: ingrediente
+    };
+    final rowsAffected = await dbHelper.update(row);
+    print('updated $rowsAffected row(s)');
+  }
+
+  void _query() async {
+    final allRows = await dbHelper.queryAllRows();
+    print('Estas són las recetas disponibles:');
+    allRows.forEach(print);
+  }
+
 }
